@@ -20,47 +20,33 @@ buttons.forEach(btn=>{
         return;
     }
 
+    function style(){
+        p.classList.add("hover"); // add classes to li
+        p.style.cursor = "pointer"; // change cursor style  
+        p.onclick=()=>{
+        p.remove();
+        };
+        textInput1.value = "";
+        textInput2.value = "";
+    }
+
     // itemmList.innerHTML = "";
     switch (operator) {
       case "+":
         p.innerText = parseInt(textInput1.value)+parseInt(textInput2.value);
-        p.classList.add("hover"); // add classes to li
-        p.style.cursor = "pointer"; // change cursor style  
-        p.onclick=()=>{
-        p.remove();
-        };
-        textInput1.value = "";
-        textInput2.value = "";
+        style();
         break;
       case "-":
         p.innerText = parseInt(textInput1.value)-parseInt(textInput2.value);
-        p.classList.add("hover"); // add classes to li
-        p.style.cursor = "pointer"; // change cursor style  
-        p.onclick=()=>{
-        p.remove();
-        };
-        textInput1.value = "";
-        textInput2.value = "";
+        style();
         break;
       case "*":
         p.innerText = parseInt(textInput1.value)*parseInt(textInput2.value);
-        p.classList.add("hover"); // add classes to li
-        p.style.cursor = "pointer"; // change cursor style  
-        p.onclick=()=>{
-        p.remove();
-        };
-        textInput1.value = "";
-        textInput2.value = "";
+        style();
         break;
       case "/":
         p.innerText = parseInt(textInput1.value)/parseInt(textInput2.value);
-        p.classList.add("hover"); // add classes to li
-        p.style.cursor = "pointer"; // change cursor style  
-        p.onclick=()=>{
-        p.remove();
-        };
-        textInput1.value = "";
-        textInput2.value = "";
+        style();
         break;
         
       default:
