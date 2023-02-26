@@ -8,22 +8,36 @@ addBtn.addEventListener("click", function(){
     if(value == ""){
         alert("bosh qoyma")
         return;
-        
+
     }
     itemmList.innerHTML = ""
     for (let i = 1; i <= value; i++) {
         let li = document.createElement("li");
-        li.innerText = i;
-        li.classList.add("list-group-item", "hover"); // add classes to li
+
+        let icon = document.createElement("i");
+        icon.classList.add('fa-solid', 'fa-trash')
+        let span = document.createElement("span")
+        span.innerText = i
+        li.append(span,icon);
+        li.classList.add("list-group-item", "hover", "li"); // add classes to li
         li.style.cursor = "pointer"; // change cursor style
-        itemmList.appendChild(li);  
+        itemmList.appendChild(li);
+        icon.onclick=()=>{
+            li.remove();
+        } // when clicked will remove li
     }
-    textInput.value = "";  
+    textInput.value = "";
 })
 
 
 removeBtn.addEventListener("click", function(){
-    itemmList.innerHTML = ""
+    itemmList.innerHTML = "" // make innerhtml empth
 })
+
+document.getElementById("button").onclick = function(){
+    let text = document.getElementById("text");
+    text.classList.toggle("test")
+}
+
 
 
