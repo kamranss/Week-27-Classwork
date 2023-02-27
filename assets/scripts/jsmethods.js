@@ -57,7 +57,7 @@ btn.onclick = ()=>{
     alert("salam");
 }
 
-// it is iverrideing the existing method
+// it is overriding the existing method
 btn.onclick = ()=>{
     alert("sagol");
 }
